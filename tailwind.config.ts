@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,27 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Football Injury app specific colors
+				pitch: {
+					DEFAULT: '#1A5D1A',
+					light: '#2D882D',
+					dark: '#116611'
+				},
+				highlight: {
+					DEFAULT: '#FF6B35',
+					light: '#FF8C5A',
+					dark: '#E64A00'
+				},
+				risk: {
+					high: '#D90429',
+					medium: '#FFC857',
+					low: '#5FAD56'
+				},
+				neutral: {
+					light: '#F5F7FA',
+					DEFAULT: '#ADB5BD',
+					dark: '#343A40'
 				}
 			},
 			borderRadius: {
@@ -84,11 +106,16 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-alert': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.6' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-alert': 'pulse-alert 2s ease-in-out infinite'
 			}
 		}
 	},
