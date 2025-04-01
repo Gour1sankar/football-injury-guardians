@@ -3,7 +3,7 @@ import React from 'react';
 import { Player, getRiskLevel } from '../data/players';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Alert, AlertCircle } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 
 interface PlayerCardProps {
   player: Player;
@@ -33,7 +33,7 @@ const PlayerCard: React.FC<PlayerCardProps> = ({ player, onSelect, isActive }) =
             </div>
             {riskLevel === 'High' && (
               <div className="absolute -top-1 -right-1">
-                <Alert size={16} className="text-risk-high animate-pulse-alert" />
+                <AlertCircle size={16} className="text-risk-high animate-pulse-alert" />
               </div>
             )}
           </div>
